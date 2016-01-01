@@ -1,0 +1,12 @@
+<launch>
+  <include file="$(find turtlebot_le2i)/launch/rplidar_minimal.launch" />
+  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch" />
+  <include file="$(find rbx1_nav)/launch/tb_demo_amcl.launch" />
+  <include file="$(find joy2twist)/launch/joy2twist_cpp.launch" />
+  <node pkg="sound_play" type="soundplay_node.py" name="soundplay_node" output="screen" />
+  <node  pkg="rbx1_speech" type="voice_feedback.py" name="voice_feedback" output="screen" />
+  
+  <!-- Rosbag (logs) record (on turtlebot) -->
+  <node pkg="rosbag" type="record" name="record" args="-o /home/turtlebot/ros/hydro/catkin_ws/src/rbx1/rbx1_nav/bag_files/Data/Morning/ /camera/rgb/camera_info /camera/depth_registered/image_raw/compressedDepth /camera/rgb/image_rect_color/compressed /tf /scan /odom ">
+  </node>
+</launch>
