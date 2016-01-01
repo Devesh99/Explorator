@@ -1,0 +1,14 @@
+<launch>
+  <!-- rplidar-->
+  <include file="$(find turtlebot_le2i)/launch/rplidar_minimal.launch" />
+  
+  <include file="$(find rbx1_nav)/launch/rplidar_gmapping_demo.launch" />
+
+  <include file="$(find frontier_exploration)/launch/exploration_turtlebot.launch" />
+
+  <include file="$(find joy2twist)/launch/joy2twist_cpp.launch" />
+  
+  <!-- Feedback (speech) from turtlebot -->
+  <node pkg="sound_play" type="soundplay_node.py" name="soundplay_node" output="screen" />
+  <node  pkg="rbx1_speech" type="voice_feedback.py" name="voice_feedback" output="screen" />
+</launch>
