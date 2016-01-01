@@ -6,9 +6,9 @@
 \pard\pardeftab720
 
 \f0\fs26 \cf0 \expnd0\expndtw0\kerning0
-# Explorator\
+## Explorator\
 \
-Robotics project on a Turtlebot 2 running the ROS Hydro Medusa distribution. \
+Robotics project on a Turtlebot 2 running the ROS Hydro Medusa distribution\
 \
 Modeled after applications in exploration, search and rescue, and disaster operations. Task capabilities:\
 * Autonomous SLAM\
@@ -25,5 +25,6 @@ Refer the report for further details.\
 \
 Devesh Adlakha\
 deveshadlakha@gmail.com\
+\
 \
 }
